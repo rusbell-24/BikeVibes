@@ -1,0 +1,21 @@
+<section class="dinamic-table">
+    <div class="container-title">
+        <h2 class="title-table">{{ sectionTitle }}</h2>
+    </div>
+    <table mat-table>
+      <tr *ngFor="let element of elements; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ element.name }}</td>
+        <td>
+          <button class="btn-delete">
+            <img src="icons/delete.png" alt="">
+          </button>
+        </td>
+        <td>
+          <button class="btn-info">
+            <img [src]="img" alt="">
+          </button>
+        </td>
+      </tr>
+    </table>
+  </section>

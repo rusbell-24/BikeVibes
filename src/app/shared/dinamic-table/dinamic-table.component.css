@@ -1,0 +1,53 @@
+table {
+    border-spacing: 1px 10px;
+}
+
+tr{
+    width: 60px;
+    height: 40px;
+    background-color: var(--skin-color);
+    color: var(--btn-font-color);
+    margin-bottom: 10px;
+}
+
+tr td{
+    padding: 0 10px;
+}
+
+img{
+    width: 30px;
+    height: 30px;
+}
+
+.container-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--skin-color);
+    height: 50px;
+    margin: 10px 0;
+}
+
+.container-title h2{
+    color: #17908F;
+}
+
+.btn-delete{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.btn-delete img{
+    width: 20px;
+    height: 23px;
+}
+
+.btn-info{
+    cursor: pointer;
+    width: 60px;
+    height: 40px;
+    background-color: var(--secondary-green);
+    border: none;
+    margin: 0 -10px;
+}

@@ -11,23 +11,7 @@
   </div>    
 
     <!-- Tabla de Rutas -->
-    <section class="routes-table">
-      <h2>Mis Rutas</h2>
-      <table mat-table>
-        <tr *ngFor="let ruta of rutas; let i = index">
-          <td>{{ i + 1 }}</td>
-          <td>{{ ruta.nombre }}</td>
-          <td>
-            <button mat-icon-button color="warn">
-              <mat-icon>delete</mat-icon>
-            </button>
-          </td>
-          <td>
-            <button mat-icon-button color="primary">
-              <mat-icon>directions_bike</mat-icon>
-            </button>
-          </td>
-        </tr>
-      </table>
-    </section>
+     <div class="container-table">
+       <app-dinamic-table [sectionTitle]="'Mis Rutas'" [elements]="rutas" [img]="'icons/ruta.png'"></app-dinamic-table>
+     </div>
   </div>

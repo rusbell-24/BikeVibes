@@ -15,3 +15,15 @@
   border: 1px solid var(--primary-green);
   border-radius: 10px;
 }
+
+.new-route button:hover{
+  border: 2px solid var(--secondary-green);
+  font-size: 1.1em;
+  
+}
+
+.container-table{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
