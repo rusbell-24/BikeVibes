@@ -1,0 +1,15 @@
+button{
+    cursor: pointer;
+    width: 110px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.btn-events{
+    background-color: var(--secondary-green);
+}
+.btn-events:hover{
+    background-color: var(--secondary-green-dark);
+}

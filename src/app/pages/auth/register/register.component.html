@@ -1,0 +1,33 @@
+<div class="register-container">
+    <div class="header-container">
+      <img class="back-icon" src="icons/back.png" alt="back"  routerLink='/login'>
+    </div>
+    <div class="img-container">
+        <img src="images/logo.jpeg" alt="Logo">
+    </div>
+    <form>
+      <div class="input-container">
+        <div class="input-register input-username">
+            <img class="input-icon"src="icons/username.png" alt="">
+            <input type="text" id="username" name="username" placeholder="usuario" [(ngModel)]="model.username">
+        </div>
+        <div class="input-register input-email">
+            <img class="input-icon"src="icons/username.png" alt="">
+            <input type="email" id="email" name="email" placeholder="email" [(ngModel)]="model.email">
+        </div>
+        <div class="input-register input-password">
+            <img class="input-icon" src="icons/password.png" alt="">
+            <input type="password" id="password" name="password" placeholder="contraseña" [(ngModel)]="model.password">
+        </div>
+        <div class="input-register input-suscipcion">
+          <label for="suscripcion"> Escoja el tipo de suscripción</label>
+          <select class="form-control" name="suscripcion" id="suscripcion" [(ngModel)]="model.suscripcion">
+            <option *ngFor="let suscripcion of suscripciones" [value]="suscripcion.value">{{suscripcion.text}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="btn-container">
+          <button type="submit" class="register-btn" >Registrarme</button>
+      </div>
+    </form>
+  </div>

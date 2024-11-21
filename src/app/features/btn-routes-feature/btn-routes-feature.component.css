@@ -1,0 +1,15 @@
+button{
+    cursor: pointer;
+    width: 110px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.btn-routes{
+    background-color: var(--primary-green);
+}
+.btn-routes:hover{
+    background-color: var(--primary-green-dark);
+}

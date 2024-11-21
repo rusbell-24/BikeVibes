@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Righteous&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: "inter";
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --primary-green: #9AEEA3;
+    --primary-green-dark: #72D17C;
+    --secondary-green: #9CDEDD;
+    --secondary-green-dark: #55B1AF;
+    --primary-font-color:#666666;
+    --skin-color:#FCF9F2;
+    --btn-font-color:#4B4B4B;
+    --font-size: 16px;
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
