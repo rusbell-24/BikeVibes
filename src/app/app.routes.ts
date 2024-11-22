@@ -3,6 +3,8 @@ import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
 import { RutaComponent } from './pages/rutas/ruta/ruta.component';
 import { routesGuard } from './guards/routes.guard';
+import { EventsComponent } from './pages/portal-eventos/events/events.component';
+import { eventsGuard } from './guards/events.guard';
 
 export const routes: Routes = [
     
@@ -19,9 +21,6 @@ export const routes: Routes = [
         path: 'register',
         component: RegisterComponent 
     },
-    // { 
-    //     path: 'rutas',
-    //     component: RutaComponent 
-    // },
     { path: 'rutas', component: RutaComponent, canActivate: [routesGuard] },
+    { path: 'eventos', component: EventsComponent, canActivate: [eventsGuard] },
 ];

@@ -25,9 +25,4 @@ export class RegisterComponent {
       }
     }
   }
-
-  // refrescar(){
-  //   this.model = {username:"",email:"",password:""};
-  // }
-
 }

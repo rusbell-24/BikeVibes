@@ -1,0 +1,29 @@
+.new-route {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding: 0 10px;
+    height: 90px;
+  }
+  
+  .new-route button {
+    width: 120px;
+    height: 45px;
+    margin: 0 10px;
+    background-color: white;
+    color: #4FB621;
+    border: 1px solid var(--primary-green);
+    border-radius: 10px;
+  }
+  
+  .new-route button:hover{
+    border: 2px solid var(--secondary-green);
+    font-size: 1.1em;
+    
+  }
+  
+  .container-table{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }

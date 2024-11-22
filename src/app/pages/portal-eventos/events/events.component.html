@@ -1,0 +1,17 @@
+<div class="container">
+    <!-- Encabezado -->
+    <app-header></app-header>
+
+    <!-- Botones de navegación -->
+    <app-navigation></app-navigation>
+
+    <!-- Boton Nuevo evento -->
+    <div class="new-route">
+      <button>Nuevo evento</button>
+  </div>    
+
+    <!-- Tabla de eventos -->
+     <div class="container-table">
+       <app-dinamic-table [sectionTitle]="'Mis Eventos'" [elements]="eventos" [img]="'icons/evento.png'"></app-dinamic-table>
+     </div>
+  </div>

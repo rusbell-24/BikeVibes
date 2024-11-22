@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-btn-routes-feature',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './btn-routes-feature.component.html',
   styleUrl: './btn-routes-feature.component.css'
 })

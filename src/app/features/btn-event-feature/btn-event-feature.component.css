@@ -10,6 +10,14 @@ button{
 .btn-events{
     background-color: var(--secondary-green);
 }
+
 .btn-events:hover{
     background-color: var(--secondary-green-dark);
+}
+
+.btn-events.active{
+    background-color: var(--primary-green);
+}
+.btn-events.active:hover{
+    background-color: var(--primary-green-dark);
 }
