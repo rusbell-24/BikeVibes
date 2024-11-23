@@ -1,5 +1,5 @@
 export enum Suscripcion {
-    UrbaniBike = 1,
-    BikeExplora = 2,
-    VeloMaster = 3 
+    URBAN = 1,
+    EXPLORA = 2,
+    MASTER = 3 
 }

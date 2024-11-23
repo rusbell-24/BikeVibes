@@ -1,0 +1,32 @@
+<div class="modal-title">
+    <img mat-button mat-dialog-close src="icons/close.png" alt="">
+    <h2 mat-dialog-title>{{ data.title || 'Nuevo Registro' }}</h2>
+</div>
+<mat-dialog-content>
+    <form>
+        <div class="container-inputs" *ngFor="let field of data.fields" [ngSwitch]="field.type">
+            <div class="container-inputs" *ngSwitchCase="'text'">
+                <input class="input" [type]="field.type" [id]="field.name" [(ngModel)]="field.value"  [placeholder]="field.label"/>
+            </div>
+            <div class="container-inputs" *ngSwitchCase="'textarea'">
+                <textarea class="input" [id]="field.name" [ngModel]="field.value" [placeholder]="field.label"></textarea>
+            </div>
+            <div class="container-inputs select" *ngSwitchCase="'select'">
+                <label [for]="field.name">{{ field.label }}:</label>
+                <select class="input" [id]="field.name" [(ngModel)]="field.value">
+                    <option *ngFor="let option of field.options" [value]="option.value">{{ option.label }}</option>
+                </select>
+            </div>
+            <div class="container-inputs" *ngSwitchCase="'checkbox'">
+                <label [for]="field.name">
+                    {{ field.label }}
+                    <input type="checkbox" [id]="field.name" [(ngModel)]="field.value" />
+                </label>
+            </div>
+        </div>
+    </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button class="btn-send" mat-button (click)="save()">Enviar</button>
+</mat-dialog-actions>
