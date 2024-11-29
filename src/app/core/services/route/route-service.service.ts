@@ -9,7 +9,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class RouteService {
 
-  private routesSubject = new BehaviorSubject<any[]>([]);  // El estado actual de las rutas
+  private routesSubject = new BehaviorSubject<any[]>([]);  
   routes$ = this.routesSubject.asObservable();
 
   constructor(private httpService: HttpService) {}

@@ -27,17 +27,15 @@ export class eventsGuard implements CanActivate {
 
     if (sessionInfo) {
       this.permissionService.setUserType(sessionInfo.user.userType);
-      // Verificar permisos con el servicio
+      
       this.showfeature = this.permissionService.canAccessFeature('eventPortalFeature');
       if (this.showfeature) {
         return true;
       }
       else {
-        return false;
-        // Redirige si no está autenticado
         window.alert('No tienes permiso para acceder a esta ruta.');
         window.location.href = '/login';
-      return false;
+        return false;
       }
     } else {
       // Redirige si no está autenticado

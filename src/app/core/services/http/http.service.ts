@@ -99,8 +99,8 @@ export class HttpService {
   
     const options = {
       headers: httpHeaders,
-      body: data,  // Aquí es donde envías los datos en el cuerpo
-      observe: 'response' as const  // Especificamos que queremos la respuesta completa (código de estado, etc.)
+      body: data,  
+      observe: 'response' as const 
     };
   
     return this.http.delete<string>(`${this.baseUrl}${url}`, options);

@@ -1,13 +1,16 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './pages/auth/login/login.component';
-import { RegisterComponent } from './pages/auth/register/register.component';
-import { RutaComponent } from './pages/rutas/ruta/ruta.component';
+
 import { routesGuard } from './core/guards/rutas/routes.guard';
-import { EventsComponent } from './pages/portal-eventos/events/events.component';
 import { eventsGuard } from './core/guards/eventos/events.guard';
-import { VerRutaComponent } from './pages/rutas/ver-ruta/ver-ruta.component';
-import { ViewEventsComponent } from './pages/portal-eventos/view-events/view-events.component';
-import { CuentaComponent } from './pages/cuenta/cuenta.component';
+
+import { LoginComponent } from './components/pages/auth/login/login.component';
+import { RegisterComponent } from './components/pages/auth/register/register.component';
+import { RutaComponent } from './components/pages/rutas/ruta/ruta.component';
+import { EventsComponent } from './components/pages/portal-eventos/events/events.component';
+import { VerRutaComponent } from './components/pages/rutas/ver-ruta/ver-ruta.component';
+import { ViewEventsComponent } from './components/pages/portal-eventos/view-events/view-events.component';
+import { CuentaComponent } from './components/pages/cuenta/cuenta.component';
+import { accountGuard } from './core/guards/cuenta/cuenta.guard';
 
 export const routes: Routes = [
     { 
@@ -44,6 +47,7 @@ export const routes: Routes = [
     },
     {
         path:'cuenta',
-        component:CuentaComponent,  // Aquí también aplicas el guard
+        component:CuentaComponent,
+        canActivate: [accountGuard]  // Aquí también aplicas el guard
     }
 ];

@@ -1,0 +1,67 @@
+.container-event-info{
+    width: 100vw;
+    height: calc(100vh - 80px);
+    background-image: url('https://bogota.gov.co/sites/default/files/2024-11/fondo-egan-bernal.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.container-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 120px;
+}
+
+.container-title p {
+    width: 75%;
+    background-color: var(--skin-color);
+    padding: 15px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 200px;
+}
+
+.container-description p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 75%;
+    padding: 20PX;
+    background-color: var(--skin-color);
+    height: 80%;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.container-event-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.container-event-option  button{
+    cursor: pointer;
+    width: 150px;
+    height: 70px;
+    background-color: var(--primary-green);
+    border: none;
+    border-radius: 10px;
+}
+
+.container-event-option  button:hover{
+    background-color: var(--secondary-green);
+}

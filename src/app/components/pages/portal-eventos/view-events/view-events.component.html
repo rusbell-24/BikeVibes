@@ -1,0 +1,15 @@
+<div class="container">
+    <app-header></app-header>
+    <div class="container-event-info">
+        <div class="container-title">
+            <p>{{data.title}}</p>
+        </div>
+        <div class="container-description">
+            <p>el evento {{data.title}} busca: {{data.detail}}. Este evento tendra un 
+                coste de {{data.price}}$ y se llevara a cabo en {{data.location}} </p>
+        </div>
+        <div class="container-event-option">
+            <button class="btn-register-event" (click)="handlerEventRegistration()">Registrarme</button>
+        </div>
+    </div>
+</div>

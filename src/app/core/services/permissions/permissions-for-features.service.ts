@@ -16,8 +16,8 @@ export class PermissionsForFeaturesService {
 
     const permissions: Record<UserType, string[]> = {
       URBAN: [''],
-      EXPLORA: ['eventPortalFeature', 'deleteEventFeature'],
-      MASTER: ['sharedRouteFeature','eventPortalFeature', 'deleteEventFeature', 'customizationProfileFeature'],
+      EXPLORA: ['eventPortalFeature', 'deleteRouteFeature'],
+      MASTER: ['sharedRouteFeature','eventPortalFeature', 'deleteEventFeature', 'customizationProfileFeature','deleteRouteFeature'],
     };
 
     return permissions[this.userType].includes(feature);

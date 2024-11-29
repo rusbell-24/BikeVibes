@@ -7,24 +7,22 @@ import { UserService } from '../../services/user/user.service';
   providedIn: 'root'
 })
 
-export class routesGuard implements CanActivate {
+export class accountGuard implements CanActivate {
 
   constructor(private userService: UserService, private router: Router) {}
 
   canActivate(
-    route: ActivatedRouteSnapshot,
+    account: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-   
+    
     if (this.userService.isSessionActive().isActive) {
       return true;
     } else {
-      
+      // Redirige si no está autenticado
       window.alert('No tienes permiso para acceder a esta ruta.');
       window.location.href = '/login';
       return false;
     }
   }
 }
-
-  

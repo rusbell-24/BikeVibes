@@ -66,7 +66,6 @@ export class UserService {
   updatePrivacy(userId: string): Observable<any> {
     console.log("updatePrivacy", userId);
   
-    // Usamos el servicio postWithoutBody para hacer la solicitud POST
     return this.httpService.postJsonWithoutCredentials(`user/${userId}/update/privacy`,{}).pipe(
       map(response => {
         localStorage.setItem('user', JSON.stringify(response.body));
@@ -108,7 +107,7 @@ export class UserService {
 
     if (user) {
       try {
-        const parsedUser = JSON.parse(user);// Intenta parsear el JSON almacenado
+        const parsedUser = JSON.parse(user);
         return { isActive: true, user: parsedUser, routes: routes, events: events}; // Retorna true y el usuario si todo está bien
       } catch (error) {
         console.error("Error al parsear el usuario desde localStorage:", error);

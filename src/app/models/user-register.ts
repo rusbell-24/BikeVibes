@@ -1,4 +1,4 @@
-import { Suscripcion } from "../pages/auth/enums/suscripcion";
+import { Suscripcion } from "../components/pages/auth/enums/suscripcion";
 
 export interface UserRegister {
     username: string;
