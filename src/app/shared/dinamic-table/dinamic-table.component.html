@@ -3,16 +3,16 @@
         <h2 class="title-table">{{ sectionTitle }}</h2>
     </div>
     <table mat-table>
-      <tr *ngFor="let element of elements; let i = index">
+      <tr *ngFor="let element of elements.slice().reverse(); let i = index">
         <td>{{ i + 1 }}</td>
-        <td>{{ element.name }}</td>
+        <td>{{ element.name || element.title }}</td>
         <td>
-          <button class="btn-delete">
+          <button class="btn-delete" (click)="onDelete(element)">
             <img src="icons/delete.png" alt="">
           </button>
         </td>
         <td>
-          <button class="btn-info">
+          <button class="btn-info" (click)="goToRoute(element)">
             <img [src]="img" alt="">
           </button>
         </td>

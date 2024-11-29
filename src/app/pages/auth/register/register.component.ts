@@ -20,11 +20,11 @@ export class RegisterComponent {
   suscripciones: any[] = [];
 
   ngOnInit(){
-    for(let item in Suscripcion){
-      if(isNaN(Number(item))){
-        this.suscripciones.push({text: item, value: Suscripcion[item]});
+    for (let item in Suscripcion) {
+      if (isNaN(Number(item))) {
+          this.suscripciones.push({ text: item, value: Suscripcion[item as keyof typeof Suscripcion] });
       }
-    }
+  }
   }
   
   onSubmit(): void {
@@ -35,6 +35,8 @@ export class RegisterComponent {
       userType: this.model.suscripcion
 
     };
+
+    console.log("envío",jsonRequest)
 
     this.userService.createUser(jsonRequest).subscribe(
       response => {

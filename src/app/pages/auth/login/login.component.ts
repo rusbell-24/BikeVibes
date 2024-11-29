@@ -25,12 +25,11 @@ export class LoginComponent {
       password: this.model.password,
     };
 
-    console.log(jsonRequest)
     this.userService.login(jsonRequest).subscribe(
       (response) => {
         console.log('Usuario validado correctamente', response);
         // Redirigir al usuario a la ruta '/rutas' después de la validación exitosa
-        this.router.navigate(['/rutas']);
+        this.router.navigate(['rutas']);
       },
       (error) => {
         console.error('Error en la validación', error);

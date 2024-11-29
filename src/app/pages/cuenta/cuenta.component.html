@@ -1,0 +1,33 @@
+<div class="container">
+    <app-header></app-header>
+    <div class="profile">
+        <div class="profile-img">
+            <img src="images/usuario.png" alt="">
+        </div>
+        @if (showPrivacyFeature) {
+            <div class="profile-privacy">
+                <label for="">privatizar</label>
+                <button (click)="toggleState()" [ngClass]="{'active': isActive}"></button>
+            </div>
+        }
+    </div>
+    <div class="user-info">
+        <p class="user-name">{{data.username}}</p>
+        <p class="user-type">{{data.userType}}</p>
+    </div>
+    @if (data.privacyLevel === 'PUBLIC') {
+        <div class="user-statistics">
+            <div class="title">
+                <p for="">Estadisticas</p>
+            </div>
+            <div class="item-statistics">
+                <label for="">Numero de rutas:  </label>
+                <p>{{routesCounter}}</p>
+            </div>
+            <div class="item-statistics">
+                <label for="">Numero de eventos: </label>
+                <p>{{eventsCounter}}</p>
+            </div>
+        </div>
+    }
+</div>

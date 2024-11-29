@@ -1,4 +1,9 @@
 <div class="header-container">
-    <img class="back-icon" src="icons/back.png" alt="back"  routerLink='/login'>
-    <img class="profile-img" src="images/usuario.png" alt="usuario">
+    <div class="back-icon-container">
+        <img class="back-icon" src="icons/back.png" alt="back"  (click)="goBack()">
+    </div>
+    <div class="profile-container">
+        <a class="btn-logout" (click)="handlerLogout()">Salir</a>
+        <img class="profile-img" src="images/usuario.png" alt="usuario" (click)="navigateToCuenta()">
+    </div>
 </div>

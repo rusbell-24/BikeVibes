@@ -1,0 +1,31 @@
+<div class="container">
+    <app-header></app-header>
+    <div class="route-container">
+        <div class="route-info-container">
+            <div>
+                <label for="">Nombre de Ruta: </label>
+                <p>{{data.title}}</p>
+            </div>
+            <div>
+                <label for="">Id de usuario: </label>
+                <p>{{data.userId}}</p>
+            </div>
+            <div>
+                <label for="">Punto de inicio: </label>
+                <p>{{data.startPoint}}</p>
+            </div>
+            <div>
+                <label for="">Punto de finalización: </label>
+                <p>{{data.endPoint}}</p>
+            </div>
+        </div>
+        @if (showsharedRoutefeature) {
+            <div class="route-shared-container">
+                <img src="icons/compartir-ruta.png" alt="">
+            </div>
+        }
+    </div>
+    <div class="maps-container">
+        <img src="images/maps.png" alt="">
+    </div>
+</div>

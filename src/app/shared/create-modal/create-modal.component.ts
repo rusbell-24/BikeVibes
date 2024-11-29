@@ -25,10 +25,12 @@ export class CreateModalComponent {
     // Fuerza la detección de cambios después de que se ha configurado la data
     this.cdr.detectChanges();
   }
+  closeModal() {
+    this.dialogRef.close(this.data.fields);  // Aquí se pasan los datos al cerrar el modal
+  }
 
-    save(): void {
-        // Lógica para guardar los datos ingresados
-        console.log('Datos del formulario:', this.data.fields);
-        this.dialogRef.close(this.data.fields); // Envía los datos al cerrar
-    }
+  save(): void {
+      // Lógica para guardar los datos ingresados
+      this.dialogRef.close(this.data.fields); // Envía los datos al cerrar
+  }
 }

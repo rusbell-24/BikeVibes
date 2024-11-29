@@ -3,7 +3,7 @@
     <app-header></app-header>
 
     <!-- Botones de navegación -->
-    <app-navigation></app-navigation>
+    <app-navigation [userType]="this.sessionInfo.user.userType" ></app-navigation>
 
     <!-- Boton Nueva Ruta -->
     <div class="new-route">
@@ -12,6 +12,6 @@
 
     <!-- Tabla de Rutas -->
      <div class="container-table">
-       <app-dinamic-table [sectionTitle]="'Mis Rutas'" [elements]="rutas" [img]="'icons/ruta.png'"></app-dinamic-table>
+       <app-dinamic-table [sectionTitle]="'Mis Rutas'" [elements]="routes" [routeToNavegate]="'ver-ruta'" [img]="'icons/ruta.png'" (deleteElement)="onDeleteElement($event)"></app-dinamic-table>
      </div>
   </div>

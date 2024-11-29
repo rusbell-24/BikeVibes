@@ -6,21 +6,21 @@
     <form>
         <div class="container-inputs" *ngFor="let field of data.fields" [ngSwitch]="field.type">
             <div class="container-inputs" *ngSwitchCase="'text'">
-                <input class="input" [type]="field.type" [id]="field.name" [(ngModel)]="field.value"  [placeholder]="field.label"/>
+                <input class="input" [type]="field.type" [id]="field.name" [(ngModel)]="field.value" [placeholder]="field.label" [name]="field.name"/>
             </div>
             <div class="container-inputs" *ngSwitchCase="'textarea'">
-                <textarea class="input" [id]="field.name" [ngModel]="field.value" [placeholder]="field.label"></textarea>
+                <textarea class="input" [id]="field.name" [(ngModel)]="field.value" [placeholder]="field.label" [name]="field.name"></textarea>
             </div>
             <div class="container-inputs select" *ngSwitchCase="'select'">
                 <label [for]="field.name">{{ field.label }}:</label>
-                <select class="input" [id]="field.name" [(ngModel)]="field.value">
-                    <option *ngFor="let option of field.options" [value]="option.value">{{ option.label }}</option>
+                <select class="input" [id]="field.name" [(ngModel)]="field.value" [name]="field.name">
+                    <option *ngFor="let option of field.options" [value]="option.key" >{{ option.label }}</option>
                 </select>
             </div>
             <div class="container-inputs" *ngSwitchCase="'checkbox'">
                 <label [for]="field.name">
                     {{ field.label }}
-                    <input type="checkbox" [id]="field.name" [(ngModel)]="field.value" />
+                    <input type="checkbox" [id]="field.name" [(ngModel)]="field.value" [name]="field.name" />
                 </label>
             </div>
         </div>

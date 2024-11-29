@@ -27,6 +27,7 @@ export class HttpService {
     });
   }
 
+
   /**
    * Realiza un POST con credenciales.
    */
@@ -84,4 +85,25 @@ export class HttpService {
       .map(key => `${key}=${encodeURIComponent(data[key])}`)
       .join('&');
   }
+
+
+  /**
+   * Realiza una solicitud DELETE sin credenciales.
+   */
+  deleteWithoutCredentials(url: string, data: any): Observable<HttpResponse<string>> {
+    console.log('HTTP DELETE URL:', this.baseUrl + url);
+  
+    const httpHeaders = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+  
+    const options = {
+      headers: httpHeaders,
+      body: data,  // Aquí es donde envías los datos en el cuerpo
+      observe: 'response' as const  // Especificamos que queremos la respuesta completa (código de estado, etc.)
+    };
+  
+    return this.http.delete<string>(`${this.baseUrl}${url}`, options);
+  }
+
 }
