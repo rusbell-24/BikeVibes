@@ -1,27 +1,35 @@
 # BikeVibes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
+Esta aplicación corresponde al frontend de una aplicación final que busca respresentar una línea de productos enfocada en una red para ciclistas, donde se logre la interacción de los miembros, el crecimiento de la comunidad y la posibilidad de adquirir productos enfocados en dicho medio de transporte, por otra parte, la aplicacion requiere interactuar con una API construida en Spring Boot para poder evidenciar su correcto funcionamiento.
 
-## Development server
+## 🛠️ Tecnologías usadas
+- Angular (v17+)
+- Spring Boot para la API
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 📋 Requisitos previos
+1. Node.js (v18+)
+2. Angular CLI instalado globalmente:
+3. Clonar y ejecutar la API desde https://github.com/YessicaGualdron/bikeVibes siguiendo la guia.
 
-## Code scaffolding
+## 🚀 Instalación y configuración
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 1.Clona el repositorio:
 
-## Build
+```
+git clone https://github.com/rusbell-24/BikeVibes.git
+cd bikeVibes
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Instala dependencias:
+```
+npm install
+```
 
-## Running unit tests
+Ejecuta la aplicación:
+```
+ng serve
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Accede a http://localhost:4200 en tu navegador.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### NOTA: No olvides tener ejecutada la API de Spring Boot al mismo tiempo que esta aplicación de Angular para poder probar su funcionamiento.
