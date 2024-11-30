@@ -20,7 +20,7 @@ export class DinamicTableComponent {
   @Input() routeToNavegate: string ='';
   @Output() deleteElement = new EventEmitter<Route>();
 
-
+  public sessionInfo: any;
   public data: any;
   public showDeleteEventfeature: boolean = false;
   public showDeleteRoutefeature: boolean = false;
@@ -33,21 +33,21 @@ export class DinamicTableComponent {
     ) {}
 
   ngOnInit():void {
-    const sessionInfo = this.userService.isSessionActive();
+    this.sessionInfo = this.userService.isSessionActive();
 
     
-    if (sessionInfo) {
+    if (this.sessionInfo) {
       
-      this.permissionService.setUserType(sessionInfo.user.userType);
+      this.permissionService.setUserType(this.sessionInfo.user.userType);
       // Verificar permiso con el servicio
       this.showDeleteEventfeature = this.permissionService.canAccessFeature('deleteEventFeature');
-      this.showDeleteRoutefeature = this.permissionService.canAccessFeature('deleteRouteFeature');
     }
   }
-
-
+  
+  
   onDelete(element: any): void {
-    this.deleteElement.emit(element);  // Emite el evento con el elemento a eliminar
+    this.deleteElement.emit(element);
+    // Emite el evento con el elemento a eliminar
   }
 
   goToElement(element: any): void {

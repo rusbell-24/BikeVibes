@@ -64,7 +64,6 @@ export class UserService {
   }
 
   updatePrivacy(userId: string): Observable<any> {
-    console.log("updatePrivacy", userId);
   
     return this.httpService.postJsonWithoutCredentials(`user/${userId}/update/privacy`,{}).pipe(
       map(response => {
@@ -72,7 +71,6 @@ export class UserService {
         return response
       }),  // Procesa la respuesta
       catchError(error => {
-        alert(error.error);
         return throwError(error);
       })
     );

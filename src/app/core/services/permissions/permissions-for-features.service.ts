@@ -14,10 +14,12 @@ export class PermissionsForFeaturesService {
   canAccessFeature(feature: string): boolean {
     if (!this.userType) return false;
 
+    //deleteRouteFeature
+
     const permissions: Record<UserType, string[]> = {
       URBAN: [''],
-      EXPLORA: ['eventPortalFeature', 'deleteRouteFeature'],
-      MASTER: ['sharedRouteFeature','eventPortalFeature', 'deleteEventFeature', 'customizationProfileFeature','deleteRouteFeature'],
+      EXPLORA: ['eventPortalFeature',],
+      MASTER: ['sharedRouteFeature','eventPortalFeature', 'deleteEventFeature', 'customizationProfileFeature',],
     };
 
     return permissions[this.userType].includes(feature);

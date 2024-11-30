@@ -50,8 +50,19 @@ export class CuentaComponent {
   toggleState() {
     console.log("toggle state")
     this.userService.updatePrivacy(this.data.id).subscribe((data: any) => {
-      this.data = data.body;
+      console.log(data)
     });
+
+    const jsonRequest = {
+      username: this.data.username,
+      password: this.data.password,
+    };
+
+    this.userService.login(jsonRequest).subscribe(
+      (response) => {
+        console.log("responsel del user", response.body.privacyLevel)
+        this.data = response.body;
+      });
     
     this.isActive = !this.isActive;
 

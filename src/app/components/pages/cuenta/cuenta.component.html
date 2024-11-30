@@ -24,10 +24,12 @@
                 <label for="">Numero de rutas:  </label>
                 <p>{{routesCounter}}</p>
             </div>
-            <div class="item-statistics">
-                <label for="">Numero de eventos: </label>
-                <p>{{eventsCounter}}</p>
-            </div>
+            @if (data.userType != "URBAN") {
+                <div class="item-statistics">
+                    <label for="">Numero de eventos: </label>
+                    <p>{{eventsCounter}}</p>
+                </div>
+            }
         </div>
     }
 </div>
